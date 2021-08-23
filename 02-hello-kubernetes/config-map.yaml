@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: hello-kubernetes
+  labels:
+    app.kubernetes.io/name: hello-kubernetes
+    app.kubernetes.io/component: application
+data:
+  PORT: "4000"
+  MESSAGE: "Hello the native web :-)"

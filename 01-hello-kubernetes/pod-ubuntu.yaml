@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: bastion-host
+  labels:
+    app.kubernetes.io/name: bastion-host
+    app.kubernetes.io/component: application
+spec:
+  containers:
+  - name: ubuntu
+    image: ubuntu
+    command:
+    - sleep
+    args:
+    - infinity

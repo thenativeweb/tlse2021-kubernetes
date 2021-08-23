@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: hello-kubernetes
+  labels:
+    app.kubernetes.io/name: hello-kubernetes
+    app.kubernetes.io/component: application
+spec:
+  containers:
+  - name: hello-kubernetes
+    image: ghcr.io/thenativeweb/tlse2021-kubernetes
+    ports:
+    - containerPort: 4000
+    env:
+    - name: PORT
+      value: "4000"
+  imagePullSecrets:
+  - name: docker-ghcr
